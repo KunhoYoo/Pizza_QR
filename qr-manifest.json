@@ -1,0 +1,93 @@
+{
+  "logo_ratio_final": 0.5,
+  "logo_ratio_final_percent": 50.0,
+  "error_correction": "H",
+  "border_modules": 4,
+  "active_tables": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "empty_tables": [
+    3
+  ],
+  "tables": {
+    "1": {
+      "url": "https://anatellopan-tablepay.vercel.app/?qr=2Eqs3oPVJt8PFJkO",
+      "file": "assets/qr/table-01.png",
+      "width": 1272,
+      "height": 1272,
+      "validation": "8/8 pass"
+    },
+    "2": {
+      "url": "https://anatellopan-tablepay.vercel.app/?qr=XjBcr9R3rSkaFvWO",
+      "file": "assets/qr/table-02.png",
+      "width": 1272,
+      "height": 1272,
+      "validation": "8/8 pass"
+    },
+    "4": {
+      "url": "https://anatellopan-tablepay.vercel.app/?qr=Z47MBCYO59JjOL0n",
+      "file": "assets/qr/table-04.png",
+      "width": 1272,
+      "height": 1272,
+      "validation": "8/8 pass"
+    },
+    "5": {
+      "url": "https://anatellopan-tablepay.vercel.app/?qr=AqCAZxN07pbu87am",
+      "file": "assets/qr/table-05.png",
+      "width": 1272,
+      "height": 1272,
+      "validation": "8/8 pass"
+    },
+    "6": {
+      "url": "https://anatellopan-tablepay.vercel.app/?qr=uHfsNzfPvMe7bOgj",
+      "file": "assets/qr/table-06.png",
+      "width": 1272,
+      "height": 1272,
+      "validation": "8/8 pass"
+    },
+    "7": {
+      "url": "https://anatellopan-tablepay.vercel.app/?qr=liegjuZpOFAjRNMU",
+      "file": "assets/qr/table-07.png",
+      "width": 1272,
+      "height": 1272,
+      "validation": "8/8 pass"
+    },
+    "8": {
+      "url": "https://anatellopan-tablepay.vercel.app/?qr=KIm3joaTHuEcI76S",
+      "file": "assets/qr/table-08.png",
+      "width": 1272,
+      "height": 1272,
+      "validation": "8/8 pass"
+    },
+    "9": {
+      "url": "https://anatellopan-tablepay.vercel.app/?qr=SZdJVfGnXaGAlI2T",
+      "file": "assets/qr/table-09.png",
+      "width": 1272,
+      "height": 1272,
+      "validation": "8/8 pass"
+    },
+    "10": {
+      "url": "https://anatellopan-tablepay.vercel.app/?qr=5wXY2nJwKdBvg776",
+      "file": "assets/qr/table-10.png",
+      "width": 1272,
+      "height": 1272,
+      "validation": "8/8 pass"
+    },
+    "11": {
+      "url": "https://anatellopan-tablepay.vercel.app/?qr=vQ4ea7D0un0iUa3",
+      "file": "assets/qr/table-11.png",
+      "width": 1272,
+      "height": 1272,
+      "validation": "8/8 pass"
+    }
+  }
+}
