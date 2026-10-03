@@ -8,213 +8,69 @@
   <title>AnatelloPan · Table QR</title>
   <style>
     :root {
-      --bg: #080808;
-      --panel: #111;
-      --line: rgba(255,255,255,.10);
-      --text: #f7f7f3;
-      --muted: #9d9d96;
-      --accent: #f3efe5;
-      --radius: 24px;
+      --bg:#080808; --panel:#111; --line:rgba(255,255,255,.10);
+      --text:#f7f7f3; --muted:#9d9d96; --accent:#f3efe5; --radius:24px;
     }
-    * { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; }
+    * { box-sizing:border-box; }
+    html { -webkit-text-size-adjust:100%; }
     body {
-      margin: 0;
-      min-height: 100vh;
-      background:
-        radial-gradient(circle at top left, rgba(255,255,255,.055), transparent 32rem),
-        var(--bg);
-      color: var(--text);
-      font-family: Inter, Pretendard, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", "Noto Sans KR", Arial, sans-serif;
+      margin:0; min-height:100vh;
+      background:radial-gradient(circle at top left, rgba(255,255,255,.055), transparent 32rem), var(--bg);
+      color:var(--text);
+      font-family:Inter,Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",Arial,sans-serif;
     }
-    a { color: inherit; }
-    .wrap {
-      width: min(100%, 1160px);
-      margin: 0 auto;
-      padding: 30px 18px 70px;
-    }
-    .hero {
-      padding: 24px 2px 30px;
-      border-bottom: 1px solid var(--line);
-      margin-bottom: 22px;
-    }
+    a { color:inherit; }
+    .wrap { width:min(100%,1160px); margin:0 auto; padding:30px 18px 70px; }
+    .hero { padding:24px 2px 30px; border-bottom:1px solid var(--line); margin-bottom:22px; }
     .brand {
-      display: inline-flex;
-      align-items: center;
-      min-height: 48px;
-      padding: 8px 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: #000;
-      overflow: hidden;
+      display:inline-flex; align-items:center; min-height:48px; padding:8px 14px;
+      border:1px solid var(--line); border-radius:999px; background:#000; overflow:hidden;
     }
-    .brand img {
-      display: block;
-      width: min(250px, 68vw);
-      height: auto;
-    }
-    h1 {
-      margin: 24px 0 8px;
-      font-size: clamp(34px, 9vw, 68px);
-      line-height: .94;
-      letter-spacing: -.055em;
-      font-weight: 760;
-    }
-    .sub {
-      margin: 14px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.7;
-      max-width: 720px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 15px;
-    }
+    .brand img { display:block; width:min(250px,68vw); height:auto; }
+    h1 { margin:24px 0 8px; font-size:clamp(34px,9vw,68px); line-height:.94; letter-spacing:-.055em; font-weight:760; }
+    .sub { margin:14px 0 0; color:var(--muted); font-size:14px; line-height:1.7; max-width:720px; }
+    .grid { display:grid; grid-template-columns:1fr; gap:15px; }
     .table-card {
-      background: linear-gradient(180deg, #141414, #0d0d0d);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 18px;
-      box-shadow: 0 14px 50px rgba(0,0,0,.24);
+      background:linear-gradient(180deg,#141414,#0d0d0d);
+      border:1px solid var(--line); border-radius:var(--radius); padding:18px;
+      box-shadow:0 14px 50px rgba(0,0,0,.24);
     }
-    .card-head {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-    .eyebrow {
-      display: block;
-      color: var(--muted);
-      font-size: 11px;
-      letter-spacing: .18em;
-      font-weight: 700;
-    }
-    .card-head h2 {
-      margin: 2px 0 0;
-      font-size: 34px;
-      line-height: 1;
-      letter-spacing: -.04em;
-    }
+    .card-head { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:16px; }
+    .eyebrow { display:block; color:var(--muted); font-size:11px; letter-spacing:.18em; font-weight:700; }
+    .card-head h2 { margin:2px 0 0; font-size:34px; line-height:1; letter-spacing:-.04em; }
     .status {
-      display: inline-flex;
-      align-items: center;
-      height: 27px;
-      border-radius: 999px;
-      padding: 0 10px;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .08em;
+      display:inline-flex; align-items:center; height:27px; border-radius:999px; padding:0 10px;
+      font-size:10px; font-weight:800; letter-spacing:.08em;
     }
-    .status.active {
-      color: #0b0b0b;
-      background: var(--accent);
-    }
-    .status.inactive {
-      color: var(--muted);
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.02);
-    }
-    .qr-shell {
-      width: 100%;
-      padding: 13px;
-      border-radius: 18px;
-      background: #fff;
-    }
-    .qr-shell img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 7px;
-    }
-    .url-preview {
-      margin: 13px 1px 14px;
-      color: var(--muted);
-      font-size: 11px;
-      line-height: 1.5;
-      word-break: break-all;
-    }
-    .actions {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 9px;
-    }
+    .status.active { color:#0b0b0b; background:var(--accent); }
+    .status.inactive { color:var(--muted); border:1px solid var(--line); background:rgba(255,255,255,.02); }
+    .qr-shell { width:100%; padding:13px; border-radius:18px; background:#fff; }
+    .qr-shell img { display:block; width:100%; height:auto; border-radius:7px; }
+    .url-preview { margin:13px 1px 14px; color:var(--muted); font-size:11px; line-height:1.5; word-break:break-all; }
+    .actions { display:grid; grid-template-columns:1fr; gap:9px; }
     .btn {
-      min-height: 50px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 15px;
-      padding: 0 16px;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 760;
-      border: 1px solid var(--line);
-      touch-action: manipulation;
+      min-height:50px; display:inline-flex; align-items:center; justify-content:center; border-radius:15px;
+      padding:0 16px; text-decoration:none; font-size:14px; font-weight:760; border:1px solid var(--line);
     }
-    .btn.primary {
-      background: #f4f1e9;
-      color: #080808;
-      border-color: #f4f1e9;
-    }
-    .btn.secondary {
-      background: #151515;
-      color: var(--text);
-    }
+    .btn.primary { background:#f4f1e9; color:#080808; border-color:#f4f1e9; }
+    .btn.secondary { background:#151515; color:var(--text); }
     .empty-panel {
-      min-height: 180px;
-      border-radius: 18px;
-      border: 1px dashed rgba(255,255,255,.14);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: rgba(255,255,255,.015);
-      color: #d2d2cd;
-      gap: 7px;
+      min-height:180px; border-radius:18px; border:1px dashed rgba(255,255,255,.14);
+      display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+      background:rgba(255,255,255,.015); color:#d2d2cd; gap:7px;
     }
-    .empty-panel small {
-      color: var(--muted);
-      font-size: 12px;
-    }
+    .empty-panel small { color:var(--muted); font-size:12px; }
     .footnote {
-      margin: 28px 0 0;
-      padding: 17px 18px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      color: var(--muted);
-      background: rgba(255,255,255,.025);
-      font-size: 12px;
-      line-height: 1.65;
+      margin:28px 0 0; padding:17px 18px; border:1px solid var(--line); border-radius:18px;
+      color:var(--muted); background:rgba(255,255,255,.025); font-size:12px; line-height:1.65;
     }
-    @media (min-width: 660px) {
-      .wrap { padding-left: 24px; padding-right: 24px; }
-      .grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      .actions { grid-template-columns: 1fr 1fr; }
+    @media (min-width:660px) {
+      .wrap { padding-left:24px; padding-right:24px; }
+      .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .actions { grid-template-columns:1fr 1fr; }
     }
-    @media (min-width: 1000px) {
-      .grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
-    }
-    @media (hover:hover) {
-      .table-card {
-        transition: transform .18s ease, border-color .18s ease;
-      }
-      .active-card:hover {
-        transform: translateY(-2px);
-        border-color: rgba(255,255,255,.20);
-      }
-      .btn {
-        transition: transform .15s ease, opacity .15s ease;
-      }
-      .btn:hover {
-        transform: translateY(-1px);
-        opacity: .92;
-      }
+    @media (min-width:1000px) {
+      .grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
     }
   </style>
 </head>
@@ -227,8 +83,7 @@
       <h1>Table QR</h1>
       <p class="sub">
         아나텔로판 테이블 주문 QR 관리 페이지입니다.
-        QR은 지정된 Vercel 주문 링크로 직접 연결되며,
-        TABLE 03만 현재 미사용 상태입니다.
+        TABLE 01~11 전체 링크가 등록되어 있습니다.
       </p>
     </section>
 
@@ -242,13 +97,10 @@
             </div>
             <span class="status active">ACTIVE</span>
           </div>
-
           <div class="qr-shell">
             <img src="assets/qr/table-01.png" alt="Table 1 QR code" loading="lazy">
           </div>
-
           <p class="url-preview">https://anatellopan-tablepay.vercel.app/?qr=2Eqs3oPVJt8PFJkO</p>
-
           <div class="actions">
             <a class="btn primary" href="https://anatellopan-tablepay.vercel.app/?qr=2Eqs3oPVJt8PFJkO" target="_blank" rel="noopener noreferrer">
               모바일 링크 열기
@@ -267,13 +119,10 @@
             </div>
             <span class="status active">ACTIVE</span>
           </div>
-
           <div class="qr-shell">
             <img src="assets/qr/table-02.png" alt="Table 2 QR code" loading="lazy">
           </div>
-
           <p class="url-preview">https://anatellopan-tablepay.vercel.app/?qr=XjBcr9R3rSkaFvWO</p>
-
           <div class="actions">
             <a class="btn primary" href="https://anatellopan-tablepay.vercel.app/?qr=XjBcr9R3rSkaFvWO" target="_blank" rel="noopener noreferrer">
               모바일 링크 열기
@@ -284,17 +133,25 @@
           </div>
         </article>
         
-        <article class="table-card inactive-card">
+        <article class="table-card active-card">
           <div class="card-head">
             <div>
               <span class="eyebrow">TABLE</span>
               <h2>03</h2>
             </div>
-            <span class="status inactive">EMPTY</span>
+            <span class="status active">ACTIVE</span>
           </div>
-          <div class="empty-panel">
-            <span>미사용 테이블</span>
-            <small>QR 링크가 지정되지 않았습니다.</small>
+          <div class="qr-shell">
+            <img src="assets/qr/table-03.png" alt="Table 3 QR code" loading="lazy">
+          </div>
+          <p class="url-preview">https://anatellopan-tablepay.vercel.app/?qr=6rxvW3NnrSSWHvae</p>
+          <div class="actions">
+            <a class="btn primary" href="https://anatellopan-tablepay.vercel.app/?qr=6rxvW3NnrSSWHvae" target="_blank" rel="noopener noreferrer">
+              모바일 링크 열기
+            </a>
+            <a class="btn secondary" href="assets/qr/table-03.png" download="anatellopan-table-03-qr.png">
+              QR PNG 저장
+            </a>
           </div>
         </article>
         
@@ -306,13 +163,10 @@
             </div>
             <span class="status active">ACTIVE</span>
           </div>
-
           <div class="qr-shell">
             <img src="assets/qr/table-04.png" alt="Table 4 QR code" loading="lazy">
           </div>
-
           <p class="url-preview">https://anatellopan-tablepay.vercel.app/?qr=Z47MBCYO59JjOL0n</p>
-
           <div class="actions">
             <a class="btn primary" href="https://anatellopan-tablepay.vercel.app/?qr=Z47MBCYO59JjOL0n" target="_blank" rel="noopener noreferrer">
               모바일 링크 열기
@@ -331,13 +185,10 @@
             </div>
             <span class="status active">ACTIVE</span>
           </div>
-
           <div class="qr-shell">
             <img src="assets/qr/table-05.png" alt="Table 5 QR code" loading="lazy">
           </div>
-
           <p class="url-preview">https://anatellopan-tablepay.vercel.app/?qr=AqCAZxN07pbu87am</p>
-
           <div class="actions">
             <a class="btn primary" href="https://anatellopan-tablepay.vercel.app/?qr=AqCAZxN07pbu87am" target="_blank" rel="noopener noreferrer">
               모바일 링크 열기
@@ -356,13 +207,10 @@
             </div>
             <span class="status active">ACTIVE</span>
           </div>
-
           <div class="qr-shell">
             <img src="assets/qr/table-06.png" alt="Table 6 QR code" loading="lazy">
           </div>
-
           <p class="url-preview">https://anatellopan-tablepay.vercel.app/?qr=uHfsNzfPvMe7bOgj</p>
-
           <div class="actions">
             <a class="btn primary" href="https://anatellopan-tablepay.vercel.app/?qr=uHfsNzfPvMe7bOgj" target="_blank" rel="noopener noreferrer">
               모바일 링크 열기
@@ -381,13 +229,10 @@
             </div>
             <span class="status active">ACTIVE</span>
           </div>
-
           <div class="qr-shell">
             <img src="assets/qr/table-07.png" alt="Table 7 QR code" loading="lazy">
           </div>
-
           <p class="url-preview">https://anatellopan-tablepay.vercel.app/?qr=liegjuZpOFAjRNMU</p>
-
           <div class="actions">
             <a class="btn primary" href="https://anatellopan-tablepay.vercel.app/?qr=liegjuZpOFAjRNMU" target="_blank" rel="noopener noreferrer">
               모바일 링크 열기
@@ -406,13 +251,10 @@
             </div>
             <span class="status active">ACTIVE</span>
           </div>
-
           <div class="qr-shell">
             <img src="assets/qr/table-08.png" alt="Table 8 QR code" loading="lazy">
           </div>
-
           <p class="url-preview">https://anatellopan-tablepay.vercel.app/?qr=KIm3joaTHuEcI76S</p>
-
           <div class="actions">
             <a class="btn primary" href="https://anatellopan-tablepay.vercel.app/?qr=KIm3joaTHuEcI76S" target="_blank" rel="noopener noreferrer">
               모바일 링크 열기
@@ -431,13 +273,10 @@
             </div>
             <span class="status active">ACTIVE</span>
           </div>
-
           <div class="qr-shell">
             <img src="assets/qr/table-09.png" alt="Table 9 QR code" loading="lazy">
           </div>
-
           <p class="url-preview">https://anatellopan-tablepay.vercel.app/?qr=SZdJVfGnXaGAlI2T</p>
-
           <div class="actions">
             <a class="btn primary" href="https://anatellopan-tablepay.vercel.app/?qr=SZdJVfGnXaGAlI2T" target="_blank" rel="noopener noreferrer">
               모바일 링크 열기
@@ -456,13 +295,10 @@
             </div>
             <span class="status active">ACTIVE</span>
           </div>
-
           <div class="qr-shell">
             <img src="assets/qr/table-10.png" alt="Table 10 QR code" loading="lazy">
           </div>
-
           <p class="url-preview">https://anatellopan-tablepay.vercel.app/?qr=5wXY2nJwKdBvg776</p>
-
           <div class="actions">
             <a class="btn primary" href="https://anatellopan-tablepay.vercel.app/?qr=5wXY2nJwKdBvg776" target="_blank" rel="noopener noreferrer">
               모바일 링크 열기
@@ -481,15 +317,12 @@
             </div>
             <span class="status active">ACTIVE</span>
           </div>
-
           <div class="qr-shell">
             <img src="assets/qr/table-11.png" alt="Table 11 QR code" loading="lazy">
           </div>
-
-          <p class="url-preview">https://anatellopan-tablepay.vercel.app/?qr=vQ4ea7D0un0iUa3</p>
-
+          <p class="url-preview">https://anatellopan-tablepay.vercel.app/?qr=vQ4ea7D0un0iUa30</p>
           <div class="actions">
-            <a class="btn primary" href="https://anatellopan-tablepay.vercel.app/?qr=vQ4ea7D0un0iUa3" target="_blank" rel="noopener noreferrer">
+            <a class="btn primary" href="https://anatellopan-tablepay.vercel.app/?qr=vQ4ea7D0un0iUa30" target="_blank" rel="noopener noreferrer">
               모바일 링크 열기
             </a>
             <a class="btn secondary" href="assets/qr/table-11.png" download="anatellopan-table-11-qr.png">
@@ -502,8 +335,7 @@
 
     <p class="footnote">
       QR 사양: Error Correction H · 4-module quiet zone · 중앙 로고 폭 약 50%.
-      생성된 활성 QR 10개는 원본/축소/약한 블러 조건을 포함한 자동 디코딩 검증을 통과했습니다.
-      인쇄 시 QR 주변의 흰색 여백은 자르지 마세요.
+      TABLE 01~11 전체 QR이 자동 디코딩 검증을 통과했습니다.
     </p>
   </main>
 </body>
